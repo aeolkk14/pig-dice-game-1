@@ -1,17 +1,18 @@
-from random import randint
+import random
 
-current = 0
-sum = 0
-
-#player roll
 def roll():
-  roll_dice = print(randint(1,7))
-  return roll_dice
+  return random.randint(1,6)
 
-#player bank
-def bank():
-  sum += current
-  print(sum)
+player = [ 'player', 'computer']
+score = {'player': 0, 'computer': 0}
 
+random.shuffle(player)
+
+while True:
+  for i in player:
+    if i == 'player':
+      choose = input("ROLL(r) or STOP(s)>" ) 
+      turn = 0
+      total = 0
 
 
